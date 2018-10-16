@@ -56,3 +56,8 @@ real time. Reading from `/sys/kernel/debug/pt_monitor` will block until
 something is being traced and then will return the PID of the root thread of
 the target. As threads belonging to the target are created, the kernel will
 create pseudo-files with the name `/sys/kernel/debug/pt_<pid>`.
+
+## End-to-End Example
+
+See the script `trace-example.sh` for a complete example of configuring the
+kernel, starting the monitor, and timing execution for several SPEC programs.

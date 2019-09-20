@@ -1,4 +1,4 @@
-# uCFI: Documentation
+# uCFI-kernel
 
 ## Installation
 
@@ -8,8 +8,12 @@ repository (this one), and in the top directory, run the following commands:
     $ cp config .config
     $ make -j8
     $ sudo make modules_install install
+    
+## Use uCFI-kernel to enforce uCFI
 
-## Usage
+See the [uCFI-monitor](https://github.com/uCFI-GATech/ucfi-compiler) for a complete example of configuring the kernel, starting the monitor, and timing execution for several SPEC programs.
+
+## Other usage
 
 ### Basic Tracing
 
@@ -56,8 +60,3 @@ real time. Reading from `/sys/kernel/debug/pt_monitor` will block until
 something is being traced and then will return the PID of the root thread of
 the target. As threads belonging to the target are created, the kernel will
 create pseudo-files with the name `/sys/kernel/debug/pt_<pid>`.
-
-## End-to-End Example
-
-See the script `trace-example.sh` for a complete example of configuring the
-kernel, starting the monitor, and timing execution for several SPEC programs.
